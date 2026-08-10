@@ -12,25 +12,26 @@ conceptos de tooling que se repiten entre exploraciones.
 
 ## Exploraciones con repo
 
-| Exploración | Tecnologías | Repo | Visibilidad | Sitio en vivo | Estado |
-|---|---|---|---|---|---|
-| [webar](https://github.com/marcoantonioludenafarje/webar) | MindAR, A-Frame | ✓ | Público (necesita Pages) | [Pages](https://marcoantonioludenafarje.github.io/webar/) | [ROADMAP](https://github.com/marcoantonioludenafarje/webar/blob/master/ROADMAP.md): A1-A2 implementados, A3-A5 + 2 demos integrales planeados |
-| [agent-remote-labs](https://github.com/marcoantonioludenafarje/agent-remote-labs) | tmux, Claude Code, ntfy, PWA, Tailscale | ✓ | Privado (sin demo web) | — | Estructura creada, labs pendientes de ejecutar |
+| Categoría | Exploración | Tecnologías | Repo | Visibilidad | Sitio en vivo | Estado |
+|---|---|---|---|---|---|---|
+| `retail-tech/` | [webar](https://github.com/marcoantonioludenafarje/webar) | MindAR, A-Frame | ✓ | Público (necesita Pages) | [Pages](https://marcoantonioludenafarje.github.io/webar/) | [ROADMAP](https://github.com/marcoantonioludenafarje/webar/blob/master/ROADMAP.md): A1-A2 implementados, A3-A5 + 2 demos integrales planeados |
+| `agent-tooling/` | [agent-remote-labs](https://github.com/marcoantonioludenafarje/agent-remote-labs) | tmux, Claude Code, ntfy, PWA, Tailscale | ✓ | Privado (sin demo web) | — | Estructura creada, labs pendientes de ejecutar |
 
-## Exploraciones sin repo — solo `EXPLORATION.md`
+## Exploraciones sin repo — `exploraciones-pendientes/`
 
 Carpeta creada, propuesta escrita, todavía sin `gh repo create`. Ver
-[TAXONOMIA.md §5](./TAXONOMIA.md#5-cómo-arrancar-una-exploración-nueva-en-un-chat)
-para arrancar cualquiera de estas en un chat nuevo.
+[TAXONOMIA.md §6](./TAXONOMIA.md#6-cómo-arrancar-una-exploración-nueva-en-un-chat)
+para arrancar cualquiera de estas en un chat nuevo — al arrancar, se
+mueven de aquí a su categoría correspondiente.
 
-| Exploración | Doc |
-|---|---|
-| nfc-labs | `nfc-labs/EXPLORATION.md` |
-| whatsapp-integration | `whatsapp-integration/EXPLORATION.md` |
-| instagram-platform | `instagram-platform/EXPLORATION.md` |
-| tiktok-developer-platform | `tiktok-developer-platform/EXPLORATION.md` |
-| tiktok-in-app-interactive | `tiktok-in-app-interactive/EXPLORATION.md` |
-| tiktok-live-interactive | `tiktok-live-interactive/EXPLORATION.md` |
+| Exploración | Categoría probable | Doc |
+|---|---|---|
+| nfc-labs | `retail-tech/` | `exploraciones-pendientes/nfc-labs/EXPLORATION.md` |
+| whatsapp-integration | `messaging/` | `exploraciones-pendientes/whatsapp-integration/EXPLORATION.md` |
+| instagram-platform | `social-platforms/` | `exploraciones-pendientes/instagram-platform/EXPLORATION.md` |
+| tiktok-developer-platform | `social-platforms/` | `exploraciones-pendientes/tiktok-developer-platform/EXPLORATION.md` |
+| tiktok-in-app-interactive | `social-platforms/` | `exploraciones-pendientes/tiktok-in-app-interactive/EXPLORATION.md` |
+| tiktok-live-interactive | `social-platforms/` | `exploraciones-pendientes/tiktok-live-interactive/EXPLORATION.md` |
 
 "Sitio en vivo" solo aplica a exploraciones con demos web — un lab en bash
 (ej. tmux) se documenta igual pero no tiene URL, solo su
