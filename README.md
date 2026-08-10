@@ -3,22 +3,34 @@
 Índice maestro de todas las exploraciones tecnológicas bajo
 `ideas_negocio/`. Cada exploración es su propio repo (nunca uno por
 tecnología) y sigue la misma metodología: [PLAYBOOK.md](./PLAYBOOK.md).
+Reglas de nombres, visibilidad y cómo arrancar una exploración nueva:
+[TAXONOMIA.md](./TAXONOMIA.md).
 
 Este repo no tiene código de producto — es documentación pura: el índice,
 el playbook reutilizable, el catálogo de qué ya está resuelto, y los
 conceptos de tooling que se repiten entre exploraciones.
 
-## Exploraciones
+## Exploraciones con repo
 
-| Exploración | Tecnologías | Repo | Sitio en vivo | Estado |
-|---|---|---|---|---|
-| WebAR Lab | MindAR, A-Frame | [webar](https://github.com/marcoantonioludenafarje/webar-lab) | [Pages](https://marcoantonioludenafarje.github.io/webar-lab/) | [ROADMAP](https://github.com/marcoantonioludenafarje/webar-lab/blob/master/ROADMAP.md): A1-A2 implementados, A3-A5 + 2 demos integrales planeados |
-| Agent Remote Labs | tmux, Claude Code, ntfy, PWA, Tailscale | [agent-remote-labs](https://github.com/marcoantonioludenafarje/agent-remote-labs) | — (local-only por ahora) | Estructura creada, labs pendientes de ejecutar |
-| NFC Labs | NFC | *(sin repo aún — solo roadmap)* | — | Roadmap escrito |
-| Avatar Labs | *(por definir)* | *(sin repo aún)* | — | Placeholder |
-| Computer Vision Labs | *(por definir)* | *(sin repo aún)* | — | Placeholder |
-| Social Media Labs | *(por definir)* | *(sin repo aún)* | — | Placeholder |
-| WhatsApp Labs | *(por definir)* | *(sin repo aún)* | — | Placeholder |
+| Exploración | Tecnologías | Repo | Visibilidad | Sitio en vivo | Estado |
+|---|---|---|---|---|---|
+| [webar](https://github.com/marcoantonioludenafarje/webar) | MindAR, A-Frame | ✓ | Público (necesita Pages) | [Pages](https://marcoantonioludenafarje.github.io/webar/) | [ROADMAP](https://github.com/marcoantonioludenafarje/webar/blob/master/ROADMAP.md): A1-A2 implementados, A3-A5 + 2 demos integrales planeados |
+| [agent-remote-labs](https://github.com/marcoantonioludenafarje/agent-remote-labs) | tmux, Claude Code, ntfy, PWA, Tailscale | ✓ | Privado (sin demo web) | — | Estructura creada, labs pendientes de ejecutar |
+
+## Exploraciones sin repo — solo `EXPLORATION.md`
+
+Carpeta creada, propuesta escrita, todavía sin `gh repo create`. Ver
+[TAXONOMIA.md §5](./TAXONOMIA.md#5-cómo-arrancar-una-exploración-nueva-en-un-chat)
+para arrancar cualquiera de estas en un chat nuevo.
+
+| Exploración | Doc |
+|---|---|
+| nfc-labs | `nfc-labs/EXPLORATION.md` |
+| whatsapp-integration | `whatsapp-integration/EXPLORATION.md` |
+| instagram-platform | `instagram-platform/EXPLORATION.md` |
+| tiktok-developer-platform | `tiktok-developer-platform/EXPLORATION.md` |
+| tiktok-in-app-interactive | `tiktok-in-app-interactive/EXPLORATION.md` |
+| tiktok-live-interactive | `tiktok-live-interactive/EXPLORATION.md` |
 
 "Sitio en vivo" solo aplica a exploraciones con demos web — un lab en bash
 (ej. tmux) se documenta igual pero no tiene URL, solo su
@@ -43,6 +55,7 @@ volver a explicarlos cada vez:
 ## Historial de decisiones sobre el propio flujo de trabajo
 
 - [2026-08-09 — Flujo paralelo y worktrees](./docs/historial/2026-08-09-flujo-paralelo-worktrees.md) — cómo se llegó a la estructura actual.
+- [TAXONOMIA.md](./TAXONOMIA.md) — reglas de nombres/visibilidad y por qué existen (nacieron de inconsistencias reales encontradas el mismo día).
 
 ## Estructura de una exploración
 
@@ -50,7 +63,7 @@ Ver [PLAYBOOK.md](./PLAYBOOK.md) §15 para el detalle completo. Resumen:
 
 ```text
 <exploracion>/
-├── CLAUDE.md              delgado: solo lo específico de esta exploración
+├── CLAUDE.md              delgado: primera línea apunta a este PLAYBOOK.md
 ├── OBJECTIVE.md           problema, objetivo final, preguntas, diagrama
 ├── ROADMAP.md             matriz tecnología → lab → pregunta → resultado
 ├── README.md              cómo correr, cómo probar, estado

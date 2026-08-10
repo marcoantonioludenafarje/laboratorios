@@ -86,6 +86,18 @@ aplicada en `webar`:
 Con eso, el mismo build funciona igual en local, en un dominio raíz, o bajo
 `usuario.github.io/repo/`.
 
+## Renombrar el repo: la URL de Pages NO redirige
+
+`gh repo rename <nuevo>` sí deja un redirect automático para la página del
+repo (`github.com/usuario/nombre-viejo` → 301 al nuevo). La URL de
+**Pages no hace lo mismo** — `usuario.github.io/nombre-viejo/` queda en
+404 apenas se renombra, aunque la configuración de Pages sobrevive el
+rename sin tocarla. Verificado renombrando `webar-lab` → `webar` (9 ago
+2026): confirmar el rename actualiza inmediatamente, y hay que salir a
+actualizar **todo** link hardcodeado al nombre viejo (README, docs,
+`package.json`, cualquier referencia de "sitio en vivo") — no hay forma de
+posponerlo.
+
 ## Verificar un deploy
 
 ```bash
