@@ -12,7 +12,7 @@ conceptos de tooling que se repiten entre exploraciones.
 
 | Exploración | Tecnologías | Repo | Sitio en vivo | Estado |
 |---|---|---|---|---|
-| WebAR Lab | MindAR, A-Frame | [webar](https://github.com/marcoantonioludenafarje/webar-lab) | [Pages](https://marcoantonioludenafarje.github.io/webar-lab/) | 2 labs implementados / 5 planeados + 2 demos integrales |
+| WebAR Lab | MindAR, A-Frame | [webar](https://github.com/marcoantonioludenafarje/webar-lab) | [Pages](https://marcoantonioludenafarje.github.io/webar-lab/) | [ROADMAP](https://github.com/marcoantonioludenafarje/webar-lab/blob/master/ROADMAP.md): A1-A2 implementados, A3-A5 + 2 demos integrales planeados |
 | Agent Remote Labs | tmux, Claude Code, ntfy, PWA, Tailscale | [agent-remote-labs](https://github.com/marcoantonioludenafarje/agent-remote-labs) | — (local-only por ahora) | Estructura creada, labs pendientes de ejecutar |
 | NFC Labs | NFC | *(sin repo aún — solo roadmap)* | — | Roadmap escrito |
 | Avatar Labs | *(por definir)* | *(sin repo aún)* | — | Placeholder |
