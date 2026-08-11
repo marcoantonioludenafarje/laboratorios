@@ -128,3 +128,19 @@ defecto) en exploraciones/<categoria>/<nombre>/, genera OBJECTIVE.md y
 ROADMAP.md a partir de ese doc, y presenta el LAB 01 recomendado. No
 implementes nada todavía.
 ```
+
+## 7. Cómo continuar una exploración que ya tiene repo
+
+Distinto del §6 — aquí no hay nada que crear, solo retomar. Abrir Claude
+Code apuntando a `exploraciones/<categoria>/<nombre>/` y:
+
+```text
+Sigamos con <nombre>. Lee CLAUDE.md, ROADMAP.md, docs/findings.md y
+docs/decisions.md para el contexto. Según el ROADMAP, el siguiente paso
+es <LAB/DEMO siguiente>. Revisa su stub (si existe) e implementa
+siguiendo el mismo patrón que los labs anteriores.
+```
+
+Antes de avanzar al siguiente lab, revisar si el anterior ya tiene su
+sección "8. Reflexiones" llena (prueba física real) — si sigue en blanco,
+es una decisión consciente seguir igual, no un olvido.
