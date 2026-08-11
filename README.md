@@ -14,8 +14,8 @@ conceptos de tooling que se repiten entre exploraciones.
 
 | Categoría | Exploración | Tecnologías | Repo | Visibilidad | Sitio en vivo | Estado |
 |---|---|---|---|---|---|---|
-| `retail-tech/` | [webar](https://github.com/marcoantonioludenafarje/webar) | MindAR, A-Frame | ✓ | Público (necesita Pages) | [Pages](https://marcoantonioludenafarje.github.io/webar/) | [ROADMAP](https://github.com/marcoantonioludenafarje/webar/blob/master/ROADMAP.md): A1-A2 implementados, A3-A5 + 2 demos integrales planeados |
-| `agent-tooling/` | [agent-remote-labs](https://github.com/marcoantonioludenafarje/agent-remote-labs) | tmux, Claude Code, ntfy, PWA, Tailscale | ✓ | Privado (sin demo web) | — | Estructura creada, labs pendientes de ejecutar |
+| `exploraciones/retail-tech/` | [webar](https://github.com/marcoantonioludenafarje/webar) | MindAR, A-Frame | ✓ | Público (necesita Pages) | [Pages](https://marcoantonioludenafarje.github.io/webar/) | [ROADMAP](https://github.com/marcoantonioludenafarje/webar/blob/master/ROADMAP.md): A1-A2 implementados, A3-A5 + 2 demos integrales planeados |
+| `exploraciones/agent-tooling/` | [agent-remote-labs](https://github.com/marcoantonioludenafarje/agent-remote-labs) | tmux, Claude Code, ntfy, PWA, Tailscale | ✓ | Privado (sin demo web) | — | Estructura creada, labs pendientes de ejecutar |
 
 ## Exploraciones sin repo — `exploraciones-pendientes/`
 
@@ -32,6 +32,7 @@ mueven de aquí a su categoría correspondiente.
 | tiktok-developer-platform | `social-platforms/` | `exploraciones-pendientes/tiktok-developer-platform/EXPLORATION.md` |
 | tiktok-in-app-interactive | `social-platforms/` | `exploraciones-pendientes/tiktok-in-app-interactive/EXPLORATION.md` |
 | tiktok-live-interactive | `social-platforms/` | `exploraciones-pendientes/tiktok-live-interactive/EXPLORATION.md` |
+| avatar-lab | *(por definir)* | `exploraciones-pendientes/avatar-lab/EXPLORATION.md` |
 
 "Sitio en vivo" solo aplica a exploraciones con demos web — un lab en bash
 (ej. tmux) se documenta igual pero no tiene URL, solo su

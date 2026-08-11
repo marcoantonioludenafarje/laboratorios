@@ -25,21 +25,29 @@ es el punto de entrada — apunta aquí.
   (`agent-remote-labs`, `nfc-labs`) — no es obligatorio (`webar`,
   `laboratorios` no lo llevan).
 
-## 2. Estructura física: categoría → exploración
+## 2. Estructura física: `exploraciones/` → categoría → exploración
 
 ```text
 ideas_negocio/
 ├── CLAUDE.md
 ├── laboratorios/                 índice maestro — no es categoría, no es exploración
-├── exploraciones-pendientes/     ver §3
+├── exploraciones-pendientes/     ver §3 — mismo nivel que exploraciones/, es su "antes"
 │
-├── retail-tech/
-│   └── webar/
-├── agent-tooling/
-│   └── agent-remote-labs/
-└── <categoria>/
-    └── <exploracion>/            repo real
+└── exploraciones/                toda exploración que YA tiene repo
+    ├── retail-tech/
+    │   └── webar/
+    ├── agent-tooling/
+    │   └── agent-remote-labs/
+    └── <categoria>/
+        └── <exploracion>/        repo real
 ```
+
+`exploraciones/` y `exploraciones-pendientes/` son pares deliberados: el
+nombre de la carpeta ya dice en qué etapa del ciclo de vida está algo, sin
+tener que abrir nada. La raíz de `ideas_negocio/` se mantiene corta para
+siempre (`CLAUDE.md`, `laboratorios/`, `exploraciones-pendientes/`,
+`exploraciones/`) sin importar cuántas categorías o exploraciones se
+acumulen adentro.
 
 Una carpeta de categoría existe solo si ya contiene al menos un repo
 real — no se crean categorías vacías por adelantado. Mover una carpeta
@@ -71,7 +79,8 @@ son *varias* exploraciones — se separan, una carpeta cada una.
 
 Repo real (`gh repo create`) nace recién cuando esa exploración
 efectivamente arranca — no antes. En ese momento la carpeta **se mueve**
-de `exploraciones-pendientes/<nombre>/` a `<categoria>/<nombre>/`.
+de `exploraciones-pendientes/<nombre>/` a
+`exploraciones/<categoria>/<nombre>/`.
 
 ## 4. Visibilidad: privado por defecto
 
@@ -115,7 +124,7 @@ primer mensaje al chat nuevo:
 ```text
 Vamos a iniciar la exploración de exploraciones-pendientes/<nombre>/EXPLORATION.md.
 Sigue laboratorios/PLAYBOOK.md. Primero: crea el repo (privado por
-defecto) en <categoria>/<nombre>/, genera OBJECTIVE.md y ROADMAP.md a
-partir de ese doc, y presenta el LAB 01 recomendado. No implementes nada
-todavía.
+defecto) en exploraciones/<categoria>/<nombre>/, genera OBJECTIVE.md y
+ROADMAP.md a partir de ese doc, y presenta el LAB 01 recomendado. No
+implementes nada todavía.
 ```
