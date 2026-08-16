@@ -16,6 +16,7 @@ conceptos de tooling que se repiten entre exploraciones.
 |---|---|---|---|---|---|---|
 | `exploraciones/retail-tech/` | [webar](https://github.com/marcoantonioludenafarje/webar) | MindAR, A-Frame | ✓ | Público (necesita Pages) | [Pages](https://marcoantonioludenafarje.github.io/webar/) | [ROADMAP](https://github.com/marcoantonioludenafarje/webar/blob/master/ROADMAP.md): A1-A2 implementados, A3-A5 + 2 demos integrales planeados |
 | `exploraciones/agent-tooling/` | [agent-remote-labs](https://github.com/marcoantonioludenafarje/agent-remote-labs) | tmux, Claude Code, ntfy, PWA, Tailscale | ✓ | Privado (sin demo web) | — | Estructura creada, labs pendientes de ejecutar |
+| `exploraciones/customer-engagement/` | [whatsapp-integration](https://github.com/marcoantonioludenafarje/whatsapp-integration) | WhatsApp Cloud API, WPPConnect, Baileys, whatsapp-web.js, Evolution API | ✓ | Privado (sin demo web) | — | [ROADMAP](https://github.com/marcoantonioludenafarje/whatsapp-integration/blob/main/ROADMAP.md): 16 labs documentados; WA-CLOUD-01 implementado, pendiente de ejecución manual (config en Meta) |
 
 ## Exploraciones sin repo — `exploraciones-pendientes/`
 
@@ -27,7 +28,6 @@ mueven de aquí a su categoría correspondiente.
 | Exploración | Categoría probable | Doc |
 |---|---|---|
 | nfc-labs | `retail-tech/` | `exploraciones-pendientes/nfc-labs/EXPLORATION.md` |
-| whatsapp-integration | `messaging/` | `exploraciones-pendientes/whatsapp-integration/EXPLORATION.md` |
 | instagram-platform | `social-platforms/` | `exploraciones-pendientes/instagram-platform/EXPLORATION.md` |
 | tiktok-developer-platform | `social-platforms/` | `exploraciones-pendientes/tiktok-developer-platform/EXPLORATION.md` |
 | tiktok-in-app-interactive | `social-platforms/` | `exploraciones-pendientes/tiktok-in-app-interactive/EXPLORATION.md` |
