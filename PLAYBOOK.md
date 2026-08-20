@@ -1145,6 +1145,80 @@ La pregunta permanente debe ser:
 
 ---
 
+# 23. Validación diferida
+
+La validación física (probar en un dispositivo real, con las manos) es un
+recurso escaso: depende de una persona, de hardware y de estar en el lugar
+correcto. Tratarla como un bloqueo secuencial deja el trabajo detenido
+esperando quince minutos de alguien.
+
+**Regla**: la validación humana **no bloquea el avance**. Se acumula.
+
+```text
+El agente avanza hasta donde la PoC está técnicamente completa.
+Lo único que queda pendiente es lo que un humano debe confirmar.
+```
+
+## 23.1 Dos estados distintos, nunca mezclados
+
+| Estado | Qué significa | Quién lo pone |
+|---|---|---|
+| `IMPLEMENTADO` | El código corre, la instrumentación existe, la demo está desplegada. Nadie lo probó físicamente. | El agente |
+| `VALIDADO` | Un humano lo ejecutó en hardware real y hay evidencia capturada. | El humano |
+| `CERRADO` | Validado **y** con finding + decisión escritos. | El agente, con los datos del humano |
+
+Un lab `IMPLEMENTADO` **no** cuenta como resuelto en `findings.md` ni en el
+`CATALOGO`. Que el código corra no es evidencia — ver §7.
+
+## 23.2 Qué sigue estando prohibido
+
+Esta regla flexibiliza el *orden*, no la *honestidad*:
+
+- No escribir en "Reflexiones" (§6.8) nada que no se haya observado.
+- No marcar criterios de aceptación como cumplidos sin evidencia.
+- No poner una decisión (§6.9) apoyada en una prueba que no ocurrió.
+
+Un campo vacío es información válida. Un campo inventado corrompe todas
+las decisiones que se apoyen en él.
+
+## 23.3 La cola de validación
+
+Cada exploración mantiene `VALIDACION-PENDIENTE.md` en su raíz: qué hay
+que probar, en qué dispositivo, cuánto toma y qué labs desbloquea. Se
+ordena por *cuánto avance libera por minuto de humano*, no por número de
+lab.
+
+El agente la actualiza al terminar cada lab. El humano la lee cuando tiene
+un rato, ejecuta un bloque y devuelve la evidencia.
+
+## 23.4 Consecuencia: instrumentar es prioritario
+
+Si la validación humana es el recurso escaso, **abaratarla es trabajo de
+primera clase**, no accesorio. Un lab que exige anotar once mediciones a
+mano gasta más humano que uno que captura la evidencia solo y entrega un
+reporte descargable.
+
+Preferir siempre: que el sistema mida lo que puede medir, pregunte solo lo
+que no puede deducir, y produzca la evidencia en un formato que el agente
+pueda leer sin transcripción manual.
+
+## 23.5 Cuándo sí hay que parar
+
+La validación diferida tiene un límite: **no avanzar más allá de una
+suposición que la validación pendiente podría destruir.**
+
+```text
+Seguir  →  el siguiente lab es independiente, o depende de algo ya validado.
+Parar   →  el siguiente lab solo tiene sentido si la prueba pendiente sale bien.
+```
+
+Si A2 podría revelar que el tracking es inestable a un metro, A3 puede
+implementarse igual — pero no puede *asumir* estabilidad a un metro en su
+diseño. Cuando la duda pendiente cambia el diseño y no solo los números,
+se para y se pide la validación.
+
+---
+
 # INPUT PARA UN NUEVO HILO
 
 Cuando utilice este playbook en otro proyecto, proporcionaré debajo la siguiente información:

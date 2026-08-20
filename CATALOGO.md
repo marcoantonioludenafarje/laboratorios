@@ -16,6 +16,7 @@ produzca algo reutilizable (un patrón, un snippet, una decisión).
 | Reescritura de historial + identidad de commit con email noreply | webar (sesión) | [docs/conceptos-generales/github-cli.md](./docs/conceptos-generales/github-cli.md) | `git filter-branch --env-filter` + `git push --force`, solo viable si nadie más clonó el repo aún |
 | Overlay de debug en pantalla + log de eventos (sin DevTools) | webar | `labs/mindar-aframe/lab-01-camera`, `lab-02-image-tracking` | `MetricsService` + `DebugOverlay` + `EventLog`, genéricos, sin dependencias de AR — copiables a cualquier exploración con UI web |
 | Git worktrees para trabajar 2+ chats en paralelo dentro de un repo | agent-remote-labs | [docs/conceptos-generales/git-worktrees.md](./docs/conceptos-generales/git-worktrees.md) | Aplica cuando una exploración necesita paralelismo real, no antes |
+| Arnés de evidencia para pruebas físicas: mide solo lo medible, pregunta solo lo que no, y emite JSON + Markdown descargables | webar | `src/core/evidence/` | Copiable a cualquier exploración con UI web y validación manual. Sin dependencias, sin backend. **Implementado, pendiente de validación física** — ver PLAYBOOK §23.4 |
 | Publicar una página privada sin repo (Claude Artifact) | webar (sesión) | [docs/conceptos-generales/claude-code-artifacts.md](./docs/conceptos-generales/claude-code-artifacts.md) | Solo para contenido de una sola página, autocontenido, sin build |
 
 ## Capacidades de producto (por tecnología)
